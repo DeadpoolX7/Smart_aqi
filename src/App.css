@@ -1,0 +1,74 @@
+.scro{
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+    
+}
+:root{
+    --secondary:rgb(240, 240, 240);
+    --primary:rgb(102, 95, 109);
+}
+
+
+#checkboxInput {
+    display: none;
+  }
+  .bookmark {
+    cursor: pointer;
+    background-color: teal;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  .svgIcon path {
+    stroke-dasharray: 200 0;
+    stroke-dashoffset: 0;
+    stroke: white;
+    fill: #dddddd00;
+    transition-delay: 0s;
+    transition-duration: 0.5s;
+  }
+  
+  #checkboxInput:checked ~ .svgIcon path {
+    fill: white;
+    animation: bookmark 0.5s linear;
+    transition-delay: 0.5s;
+  }
+  
+  @keyframes bookmark {
+    0% {
+      stroke-dasharray: 0 200;
+      stroke-dashoffset: 80;
+    }
+    100% {
+      stroke-dasharray: 200 0;
+    }
+  }
+  
+  @keyframes borderRotate {
+    0% {
+      border-color: red;
+    }
+    25% {
+      border-color: yellow;
+    }
+    50% {
+      border-color: green;
+    }
+    75% {
+      border-color: blue;
+    }
+    100% {
+      border-color: red;
+    }
+  }
+  
+  .hover\:border-gradient-animate {
+    animation: borderRotate 2s linear infinite;
+  }
+
+  
+
+
